@@ -11,32 +11,49 @@ struct ContentView: View {
     
     @ObservedObject var myTime: CountdownManager = CountdownManager()
     
+    init() {
+        self.myTime.setUp(with: GoalTime(hours: 2,
+                                         minutes: 1,
+                                         seconds: 3))
+        self.myTime.start()
+    }
+    
     var body: some View {
-        return VStack {
-            HStack(spacing: 24) {
-                Button("Start") {
-                    self.myTime.setUp(with: GoalTime(hours: 0,
-                                                     minutes: 1,
-                                                     seconds: 3))
-                    self.myTime.start()
+        ZStack {
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            GeometryReader(content: { geometry in
+                HStack {
+                    VStack(alignment: .center) {
+                        NumberView(number: self.$myTime.hours,
+                                   type: .constant(.hours))
+                        Spacer()
+                        NumberView(number: self.$myTime.minutes,
+                                   type: .constant(.minutes))
+                        Spacer()
+                        NumberView(number: self.$myTime.seconds,
+                                   type: .constant(.seconds))
+                    }
+                    .frame(width: geometry.size.width/2)
+                    VStack(alignment: .trailing) {
+                        Button("Start") {
+                            myTime.start()
+                        }
+                        Button("Pause") {
+                            myTime.pause()
+                        }
+                        Button("Resume") {
+                            myTime.resume()
+                        }
+                        Button("Stop") {
+                            myTime.stop()
+                        }
+                    }
+                    .frame(width: geometry.size.width/2)
                 }
-                Button("Pause") {
-                    self.myTime.pause()
-                }
-                Button("Resume") {
-                    self.myTime.resume()
-                }
-                Button("Stop") {
-                    self.myTime.stop()
-                }
-            }
-            HStack(spacing: 20) {
-                Text("Horas: \(myTime.hours)")
-                Text("Minutes: \(myTime.minutes)")
-                Text("Seconds: \(myTime.seconds)")
-            }
+                .padding(.bottom)
+            })
         }
-        .padding()
     }
 }
 

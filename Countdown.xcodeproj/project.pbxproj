@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060FF6024EEEFA800E07E6A /* NumberView.swift */; };
+		F060FF6224EEEFA800E07E6A /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060FF6024EEEFA800E07E6A /* NumberView.swift */; };
 		F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */; };
 		F07DF5CC24EB36AE00A212D7 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5CB24EB36AE00A212D7 /* Tests_iOS.swift */; };
 		F07DF5D724EB36AE00A212D7 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5D624EB36AE00A212D7 /* Tests_macOS.swift */; };
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F060FF6024EEEFA800E07E6A /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownManager.swift; sourceTree = "<group>"; };
 		F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		F07DF5B124EB36AE00A212D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 			children = (
 				F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */,
 				F07DF5B124EB36AE00A212D7 /* ContentView.swift */,
+				F060FF6024EEEFA800E07E6A /* NumberView.swift */,
 				F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */,
 				F07DF5B224EB36AE00A212D7 /* Assets.xcassets */,
 			);
@@ -314,6 +318,7 @@
 				F07DF5DB24EB36AE00A212D7 /* ContentView.swift in Sources */,
 				F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */,
 				F07DF5D924EB36AE00A212D7 /* CountdownApp.swift in Sources */,
+				F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +328,7 @@
 			files = (
 				F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */,
 				F07DF5DA24EB36AE00A212D7 /* CountdownApp.swift in Sources */,
+				F060FF6224EEEFA800E07E6A /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

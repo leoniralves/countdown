@@ -20,7 +20,6 @@ class CountdownManager: ObservableObject {
     @Published var minutes: Int = 0
     @Published var seconds: Int = 0
     
-
     private var cancellable: Cancellable?
     
     init() {}
@@ -39,17 +38,27 @@ class CountdownManager: ObservableObject {
                                     options: nil)
             .autoconnect()
             .sink(receiveValue: { (output) in
-                self.seconds -= 1
-                
-                if self.seconds < 0 {
-                    self.minutes -= 1
-                    self.seconds = 59
-                } else if self.minutes < 0 {
-                    self.hours -= 1
-                    self.minutes = 59
+                guard self.hours > 0 ||
+                        self.minutes > 0 ||
+                        self.seconds > 0 else {
+                    return
                 }
                 
-                if self.hours == 0 && self.minutes == 0 && self.seconds == 0 {
+                
+                if (self.seconds == 0 && self.minutes == 0) {
+                    self.hours = self.hours == 0 ? 0 : self.hours - 1
+                    self.minutes = 59
+                    self.seconds = 59
+                } else if self.seconds == 0 {
+                    self.minutes = self.minutes == 0 ? 59 : self.minutes - 1
+                    self.seconds = 59
+                } else {
+                    self.seconds -= 1
+                }
+                
+                if self.hours == 0 &&
+                    self.minutes == 0 &&
+                    self.seconds == 0 {
                     self.stop()
                 }
             })

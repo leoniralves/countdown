@@ -15,28 +15,33 @@ enum TimeType: String {
 
 struct NumberView: View {
     @Binding var number: Int
-    @Binding var type: TimeType
+    @Binding var timeType: TimeType
     
     var body: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: .center, spacing: 0) {
+            VStack(alignment: .center,
+                   spacing: 0) {
                 Text("\(number)")
-                    .font(.system(size: 100))
-                    .foregroundColor(.white)
+                    .font(.custom("RobotoCondensed-Regular",
+                                  size: 100))
                 Rectangle()
-                    .frame(height: 1, alignment: .top)
-                    .foregroundColor(.white)
+                    .frame(height: 1,
+                           alignment: .top)
             }
-            Text(type.rawValue)
-                .foregroundColor(.white)
+            Text(timeType.rawValue)
+                .font(.custom("RobotoCondensed-Regular",
+                              size: 18))
         }
-        .padding()
+        .foregroundColor(.white)
     }
 }
 
 struct NumberView_Previews: PreviewProvider {
     static var previews: some View {
-        NumberView(number: .constant(12), type: .constant(.hours))
-            .background(Color.black)
+            NumberView(number: .constant(12),
+                       timeType: .constant(.hours))
+                .background(Color.black)
+                .previewLayout(.fixed(width: 200,
+                                      height: 200))
     }
 }

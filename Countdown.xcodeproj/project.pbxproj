@@ -18,6 +18,12 @@
 		F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B124EB36AE00A212D7 /* ContentView.swift */; };
 		F07DF5DD24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
 		F07DF5DE24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
+		F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
+		F0DBEE8D24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
+		F0DBEE9024F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */; };
+		F0DBEE9124F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */; };
+		F0DBEE9324F00CD700FAD177 /* BungeeOutline-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */; };
+		F0DBEE9424F00CD700FAD177 /* BungeeOutline-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,9 @@
 		F07DF5D224EB36AE00A212D7 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07DF5D624EB36AE00A212D7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F07DF5D824EB36AE00A212D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0DBEE8B24EF368800FAD177 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BungeeOutline-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +112,11 @@
 		F07DF5AF24EB36AE00A212D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F0DBEE8E24F00A2C00FAD177 /* Fonts */,
 				F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */,
 				F07DF5B124EB36AE00A212D7 /* ContentView.swift */,
 				F060FF6024EEEFA800E07E6A /* NumberView.swift */,
+				F0DBEE8B24EF368800FAD177 /* TitleView.swift */,
 				F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */,
 				F07DF5B224EB36AE00A212D7 /* Assets.xcassets */,
 			);
@@ -156,6 +167,15 @@
 				F07DF5D824EB36AE00A212D7 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		F0DBEE8E24F00A2C00FAD177 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */,
+				F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DBEE9024F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */,
 				F07DF5DD24EB36AE00A212D7 /* Assets.xcassets in Resources */,
+				F0DBEE9324F00CD700FAD177 /* BungeeOutline-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0DBEE9124F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */,
 				F07DF5DE24EB36AE00A212D7 /* Assets.xcassets in Resources */,
+				F0DBEE9424F00CD700FAD177 /* BungeeOutline-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +343,7 @@
 				F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */,
 				F07DF5D924EB36AE00A212D7 /* CountdownApp.swift in Sources */,
 				F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */,
+				F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +354,7 @@
 				F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */,
 				F07DF5DA24EB36AE00A212D7 /* CountdownApp.swift in Sources */,
 				F060FF6224EEEFA800E07E6A /* NumberView.swift in Sources */,
+				F0DBEE8D24EF368800FAD177 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

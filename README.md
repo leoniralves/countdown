@@ -1,2 +1,7 @@
 # countdown
-Contador regressivo feito com SwiftUI e Combine
+Contador regressivo
+
+### Tecnologias
+SwiftUI e Combine
+
+![image](https://github.com/leoniralves/countdown/blob/develop/Files/img_01.png)

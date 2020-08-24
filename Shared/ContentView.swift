@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var rectangleSize: CGSize? = nil
     
     init() {
-        self.myTime.setUp(with: GoalTime(hours: 1,
+        self.myTime.setUp(with: Countdown(hours: 1,
                                          minutes: 0,
                                          seconds: 3))
     }

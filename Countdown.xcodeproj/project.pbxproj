@@ -18,6 +18,8 @@
 		F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B124EB36AE00A212D7 /* ContentView.swift */; };
 		F07DF5DD24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
 		F07DF5DE24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
+		F0D55E5A24F4081800111888 /* WidthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D55E5924F4081800111888 /* WidthKey.swift */; };
+		F0D55E5D24F4087F00111888 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D55E5C24F4087F00111888 /* Countdown.swift */; };
 		F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
 		F0DBEE8D24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
 		F0DBEE9024F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */; };
@@ -60,6 +62,8 @@
 		F07DF5D224EB36AE00A212D7 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07DF5D624EB36AE00A212D7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F07DF5D824EB36AE00A212D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0D55E5924F4081800111888 /* WidthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthKey.swift; sourceTree = "<group>"; };
+		F0D55E5C24F4087F00111888 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		F0DBEE8B24EF368800FAD177 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BungeeOutline-Regular.ttf"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		F07DF5AF24EB36AE00A212D7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F0D55E5B24F4086A00111888 /* Models */,
+				F0D55E5824F4080100111888 /* PreferenceKeys */,
 				F0DBEE8E24F00A2C00FAD177 /* Fonts */,
 				F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */,
 				F07DF5B124EB36AE00A212D7 /* ContentView.swift */,
@@ -167,6 +173,22 @@
 				F07DF5D824EB36AE00A212D7 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		F0D55E5824F4080100111888 /* PreferenceKeys */ = {
+			isa = PBXGroup;
+			children = (
+				F0D55E5924F4081800111888 /* WidthKey.swift */,
+			);
+			path = PreferenceKeys;
+			sourceTree = "<group>";
+		};
+		F0D55E5B24F4086A00111888 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0D55E5C24F4087F00111888 /* Countdown.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F0DBEE8E24F00A2C00FAD177 /* Fonts */ = {
@@ -340,9 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07DF5DB24EB36AE00A212D7 /* ContentView.swift in Sources */,
+				F0D55E5D24F4087F00111888 /* Countdown.swift in Sources */,
 				F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */,
 				F07DF5D924EB36AE00A212D7 /* CountdownApp.swift in Sources */,
 				F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */,
+				F0D55E5A24F4081800111888 /* WidthKey.swift in Sources */,
 				F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

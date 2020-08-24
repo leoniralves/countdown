@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-enum TimeType: String {
-    case hours = "H"
-    case minutes = "M"
-    case seconds = "S"
-}
-
 struct NumberView: View {
+    enum TimeType: String {
+        case hours = "H"
+        case minutes = "M"
+        case seconds = "S"
+    }
+    
     @Binding var number: Int
     @Binding var timeType: TimeType
     

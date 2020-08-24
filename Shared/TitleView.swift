@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct WidthKey: PreferenceKey {
-    static let defaultValue: CGSize? = nil
-    static func reduce(value: inout CGSize?,
-                       nextValue: () -> CGSize?) {
-        value = value ?? nextValue()
-    }
-}
-
 struct TitleView: View {
     @State private var countdownTextSize: CGSize? = nil
     @State private var timeTextSize: CGSize? = nil

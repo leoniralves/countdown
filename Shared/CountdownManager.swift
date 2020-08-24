@@ -8,12 +8,6 @@
 import Foundation
 import Combine
 
-struct GoalTime {
-    let hours: Int
-    let minutes: Int
-    let seconds: Int
-}
-
 class CountdownManager: ObservableObject {
     
     @Published var hours: Int = 0
@@ -24,7 +18,7 @@ class CountdownManager: ObservableObject {
     
     init() {}
     
-    func setUp(with goal: GoalTime) {
+    func setUp(with goal: Countdown) {
         hours = goal.hours
         minutes = goal.minutes
         seconds = goal.seconds

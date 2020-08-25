@@ -11,7 +11,10 @@ import SwiftUI
 struct CountdownApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CountdownView()
+                .environmentObject(CountdownViewModel(countdownManager: CountdownManager(model: CountdownModel(hours: 1,
+                                                                                                               minutes: 2,
+                                                                                                               seconds: 2))))
         }
     }
 }

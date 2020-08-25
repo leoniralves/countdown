@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Countdown {
+struct CountdownModel {
     let hours: Int
     let minutes: Int
     let seconds: Int

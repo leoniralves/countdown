@@ -1,23 +1,17 @@
 //
-//  ContentView.swift
+//  CountdownView.swift
 //  Shared
 //
 //  Created by Leonir Alves Deolindo on 17/08/20.
 //
 
 import SwiftUI
+import Combine
 
-struct ContentView: View {
+struct CountdownView: View {
     
-    @ObservedObject var myTime: CountdownManager = CountdownManager()
-    
+    @EnvironmentObject var viewModel: CountdownViewModel
     @State private var rectangleSize: CGSize? = nil
-    
-    init() {
-        self.myTime.setUp(with: Countdown(hours: 1,
-                                         minutes: 0,
-                                         seconds: 3))
-    }
     
     var body: some View {
         ZStack {
@@ -27,13 +21,13 @@ struct ContentView: View {
                 ZStack(alignment: Alignment(horizontal: .leading,
                                             vertical: .center)) {
                     VStack {
-                        NumberView(number: self.$myTime.hours,
+                        NumberView(number: self.$viewModel.hours,
                                    timeType: .constant(.hours))
                         Spacer()
-                        NumberView(number: self.$myTime.minutes,
+                        NumberView(number: self.$viewModel.minutes,
                                    timeType: .constant(.minutes))
                         Spacer()
-                        NumberView(number: self.$myTime.seconds,
+                        NumberView(number: self.$viewModel.seconds,
                                    timeType: .constant(.seconds))
                     }
                     .padding(.init(top: 0,
@@ -62,22 +56,22 @@ struct ContentView: View {
                         VStack(alignment: .trailing,
                                spacing: 5) {
                             Button("START") {
-                                myTime.start()
+                                viewModel.countdownStart()
                             }
                             .frame(height: 44)
-                            
+
                             Button("PAUSE") {
-                                myTime.pause()
+                                viewModel.countdownPause()
                             }
                             .frame(height: 44)
-                            
+
                             Button("RESUME") {
-                                myTime.resume()
+                                viewModel.countdownResume()
                             }
                             .frame(height: 44)
-                            
+
                             Button("STOP") {
-                                myTime.stop()
+                                viewModel.countdownStop()
                             }
                             .frame(height: 44)
                         }
@@ -97,8 +91,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CountdownView()
     }
 }

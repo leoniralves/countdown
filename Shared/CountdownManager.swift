@@ -8,22 +8,25 @@
 import Foundation
 import Combine
 
-class CountdownManager: ObservableObject {
+class CountdownManager {
     
-    @Published var hours: Int = 0
-    @Published var minutes: Int = 0
-    @Published var seconds: Int = 0
+    // MARK: Public Properties
+    var currentTime = PassthroughSubject<(hours: Int, minutes:Int, seconds: Int), Never>()
     
+    // MARK: Private Properties
+    private(set) var hours = 0
+    private(set) var minutes = 0
+    private(set) var seconds = 0
     private var cancellable: Cancellable?
     
-    init() {}
-    
-    func setUp(with goal: Countdown) {
-        hours = goal.hours
-        minutes = goal.minutes
-        seconds = goal.seconds
+    // MARK: Initializer
+    init(model: CountdownModel) {
+        hours = model.hours
+        minutes = model.minutes
+        seconds = model.seconds
     }
     
+    // MARK: Public Methodos
     func start() {
         cancellable = Timer.publish(every: 1.0,
                                     tolerance: nil,
@@ -55,6 +58,10 @@ class CountdownManager: ObservableObject {
                     self.seconds == 0 {
                     self.stop()
                 }
+                
+                self.currentTime.send((hours: self.hours,
+                                       minutes: self.minutes,
+                                       seconds: self.seconds))
             })
     }
     
@@ -73,6 +80,7 @@ class CountdownManager: ObservableObject {
         self.seconds = 0
     }
 
+    // MARK: Deinit
     deinit {
         stop()
     }

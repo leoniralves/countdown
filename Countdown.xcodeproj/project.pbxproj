@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060FF6024EEEFA800E07E6A /* NumberView.swift */; };
 		F060FF6224EEEFA800E07E6A /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060FF6024EEEFA800E07E6A /* NumberView.swift */; };
+		F069BDC824F57F2E0027C3D6 /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069BDC724F57F2E0027C3D6 /* CountdownViewModel.swift */; };
 		F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */; };
 		F07DF5CC24EB36AE00A212D7 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5CB24EB36AE00A212D7 /* Tests_iOS.swift */; };
 		F07DF5D724EB36AE00A212D7 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5D624EB36AE00A212D7 /* Tests_macOS.swift */; };
 		F07DF5D924EB36AE00A212D7 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */; };
 		F07DF5DA24EB36AE00A212D7 /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */; };
-		F07DF5DB24EB36AE00A212D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B124EB36AE00A212D7 /* ContentView.swift */; };
-		F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B124EB36AE00A212D7 /* ContentView.swift */; };
+		F07DF5DB24EB36AE00A212D7 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DF5B124EB36AE00A212D7 /* CountdownView.swift */; };
 		F07DF5DD24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
 		F07DF5DE24EB36AE00A212D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07DF5B224EB36AE00A212D7 /* Assets.xcassets */; };
 		F0D55E5A24F4081800111888 /* WidthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D55E5924F4081800111888 /* WidthKey.swift */; };
-		F0D55E5D24F4087F00111888 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D55E5C24F4087F00111888 /* Countdown.swift */; };
+		F0D55E5D24F4087F00111888 /* CountdownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D55E5C24F4087F00111888 /* CountdownModel.swift */; };
 		F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
 		F0DBEE8D24EF368800FAD177 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DBEE8B24EF368800FAD177 /* TitleView.swift */; };
 		F0DBEE9024F00A3D00FAD177 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */; };
@@ -47,9 +47,10 @@
 
 /* Begin PBXFileReference section */
 		F060FF6024EEEFA800E07E6A /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		F069BDC724F57F2E0027C3D6 /* CountdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewModel.swift; sourceTree = "<group>"; };
 		F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownManager.swift; sourceTree = "<group>"; };
 		F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
-		F07DF5B124EB36AE00A212D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F07DF5B124EB36AE00A212D7 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		F07DF5B224EB36AE00A212D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F07DF5B724EB36AE00A212D7 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07DF5BA24EB36AE00A212D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 		F07DF5D624EB36AE00A212D7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F07DF5D824EB36AE00A212D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0D55E5924F4081800111888 /* WidthKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthKey.swift; sourceTree = "<group>"; };
-		F0D55E5C24F4087F00111888 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		F0D55E5C24F4087F00111888 /* CountdownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownModel.swift; sourceTree = "<group>"; };
 		F0DBEE8B24EF368800FAD177 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F0DBEE8F24F00A3D00FAD177 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		F0DBEE9224F00CD700FAD177 /* BungeeOutline-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BungeeOutline-Regular.ttf"; sourceTree = "<group>"; };
@@ -120,7 +121,8 @@
 				F0D55E5824F4080100111888 /* PreferenceKeys */,
 				F0DBEE8E24F00A2C00FAD177 /* Fonts */,
 				F07DF5B024EB36AE00A212D7 /* CountdownApp.swift */,
-				F07DF5B124EB36AE00A212D7 /* ContentView.swift */,
+				F07DF5B124EB36AE00A212D7 /* CountdownView.swift */,
+				F069BDC724F57F2E0027C3D6 /* CountdownViewModel.swift */,
 				F060FF6024EEEFA800E07E6A /* NumberView.swift */,
 				F0DBEE8B24EF368800FAD177 /* TitleView.swift */,
 				F07A96EE24EC84A50053CDF5 /* CountdownManager.swift */,
@@ -186,7 +188,7 @@
 		F0D55E5B24F4086A00111888 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F0D55E5C24F4087F00111888 /* Countdown.swift */,
+				F0D55E5C24F4087F00111888 /* CountdownModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,10 +363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07DF5DB24EB36AE00A212D7 /* ContentView.swift in Sources */,
-				F0D55E5D24F4087F00111888 /* Countdown.swift in Sources */,
+				F07DF5DB24EB36AE00A212D7 /* CountdownView.swift in Sources */,
+				F0D55E5D24F4087F00111888 /* CountdownModel.swift in Sources */,
 				F07A96EF24EC84A50053CDF5 /* CountdownManager.swift in Sources */,
 				F07DF5D924EB36AE00A212D7 /* CountdownApp.swift in Sources */,
+				F069BDC824F57F2E0027C3D6 /* CountdownViewModel.swift in Sources */,
 				F060FF6124EEEFA800E07E6A /* NumberView.swift in Sources */,
 				F0D55E5A24F4081800111888 /* WidthKey.swift in Sources */,
 				F0DBEE8C24EF368800FAD177 /* TitleView.swift in Sources */,
@@ -375,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07DF5DC24EB36AE00A212D7 /* ContentView.swift in Sources */,
 				F07DF5DA24EB36AE00A212D7 /* CountdownApp.swift in Sources */,
 				F060FF6224EEEFA800E07E6A /* NumberView.swift in Sources */,
 				F0DBEE8D24EF368800FAD177 /* TitleView.swift in Sources */,
